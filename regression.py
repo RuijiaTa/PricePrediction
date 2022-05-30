@@ -295,7 +295,7 @@ Step4: Comparing 4 Regression Models
 
 
 def compare_4_models(p1, p2, p3, p4):
-    plt.plot(Y_test, p1, 'o', label="OLS")
+    plt.plot(Y_test, p1, 'o', label="Linear Regression")
     plt.plot(Y_test, p2, 'o', label="KNN")
     plt.plot(Y_test, p3, 'o', label="SVM")
     plt.plot(Y_test, p4, 'o', label="RF")
@@ -305,6 +305,5 @@ def compare_4_models(p1, p2, p3, p4):
     plt.show()
     print("Finish the Boston House Price Prediction!")
     print("The Best Choice is RandomForest Regression")
-
 
 compare_4_models(linear_regression(X_train, Y_train), knn_regression(X_train, Y_train),svm_regression(X_train, Y_train), random_forest_regression(X_train, Y_train))
